@@ -16,6 +16,6 @@ RUN apt-get update
 RUN pip3 install -r requirements.txt
 
 # run the app
-EXPOSE 8080
+EXPOSE 5000
 # CMD python3 yep.py
 ENTRYPOINT [ "python3", "/cvapp/yep.py" ]

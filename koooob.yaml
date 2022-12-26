@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devcor-app
+spec:
+  replicas: 3 # tells deployment to run 3 pods matching the template
+  selector:
+    matchLabels:
+      app: devcor-app
+  template:
+    metadata:
+      labels:
+        app: devcor-app
+    spec:
+      containers:
+      - name: devcor-container
+        image: ghcr.io/crvatwork/cvapp
+        ports:
+        - containerPort: 5000
+...
